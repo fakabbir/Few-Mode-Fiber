@@ -1,3 +1,8 @@
+---------------
+This file represents the results that were derived for obtaing the result mentioned in 
+Design of Three-Spatial-Mode Ring-Core Fiber - IEEE Xplore.
+---------------
+
 dmd_val1 is at 1530 nm and dmd_val1std is at 1550 nm.
 with a=7 micrometer delta=0.65% and 1,2 denotes LP11 and LP 21
 dmd_val1 = 5.143038,5.760864,5.704023,5.255243,4.709956,4.201713,3.694710,2.768693
