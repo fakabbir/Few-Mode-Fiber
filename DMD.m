@@ -1,3 +1,6 @@
+% This file is a demo file to give a propere understanding of how to calculate DMD for a given fiber.
+% Here it is assumed that the refractive index for various wavelength is as given in the lines below.
+% The code that is in coherance with the project is mentioned in DMGD.
 clear all
 clc
 c_light=3e8;
