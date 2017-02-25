@@ -1,6 +1,6 @@
 clear all;
-%dir_path = 'design1';
-mkdir(dir_path);
+dir_path = 'design1';
+%mkdir(dir_path);
 global k_stepness ;
 %copyfile('fvalues.m','design1/fvalues.m')
 %copyfile('Design_plotter.m','design1/Design.m')
