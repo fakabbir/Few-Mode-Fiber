@@ -1,3 +1,4 @@
+if 0,
 clear all;
 dir_path = 'design1';
 mkdir(dir_path);
@@ -121,5 +122,6 @@ fileID_41 = fopen('dmd_41neg.txt','a');
 fprintf(fileID_41,'%.6g ',dmd4);
 fileID_51 = fopen('dmd_51neg.txt','a');
 fprintf(fileID_51,'%.6g ',dmd5);
+end
 end
 end

@@ -1,3 +1,4 @@
+if 0,
 % This file contains fiber and amplifier parameters
 
 global stp;
@@ -42,3 +43,4 @@ tsp=10e-3;
 
 
 % L=30;%120;%88.35; %fiber length in m
+end
