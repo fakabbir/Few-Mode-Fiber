@@ -153,4 +153,4 @@ fprintf(fileID_21,'%.6g ',n2(1,1));
 %----------------------
 end
 end
-copyfile('test_cover.m','design1/test_cover.m')
+copyfile('test.m','design1/test.m')
