@@ -152,4 +152,4 @@ fileID_21 = fopen(out_21,'a');
 fprintf(fileID_21,'%.6g ',n2(1,1));
 %----------------------
 end
-copyfile('test.m','design2/test.m')
+copyfile('test.m','design1/test.m')
