@@ -1,3 +1,5 @@
+# Imprantant notes
+test.m is a template file that is used to copied to test_cover to produce the result. Please follow the same procedure to ake the task easy.
 # Few-Mode-Fiber
 Analysis of efficiency and capacity of few mode optical fibers.
 # Introduction
