@@ -1,8 +1,13 @@
-clear all
-wave=[1528.5 1529.0 1529.5 1530 1530.5 1531.0 1531.5]*1e-9+20e-9;
-%wave=1550e-9;
+clear all;
+dir_path = 'design1';
+mkdir(dir_path);
 global k_stepness ;
-for j_profile=0.2:.2:6,
+copyfile('fvalues.m','design1/fvalues.m')
+copyfile('Design_plotter.m','design1/Design.m')
+
+wave=[1528.5 1529.0 1529.5 1530 1530.5 1531.0 1531.5]*1e-9+20e-9;
+%wave=1550e-9; 
+for j_profile=0.5:1:1.5,
     k_stepness=j_profile;
 for i=1:length(wave),
     [neffr]=modesolv_l(wave(i),0,0,0);
@@ -90,6 +95,13 @@ dmd2=sum(DMD_21_01)/length(DMD_21_01);
 %dmd4=sum(DMD_41_01)/length(DMD_41_01);
 %dmd5=sum(DMD_51_01)/length(DMD_51_01);
 
+file_name = 'test1.txt';
+out = fullfile(dir_path,file_name);
+fileID_n01 = fopen(out,'a');
+fprintf(fileID_n01,'%.6g ',n0(1,1));
+
+
+if 0,
 fileID_n01 = fopen('neff_01neg.txt','a');
 fprintf(fileID_n01,'%.6g ',n0(1,1));
 fileID_n11 = fopen('neff_11neg.txt','a');
@@ -102,7 +114,7 @@ fileID_11 = fopen('dmd_11neg.txt','a');
 fprintf(fileID_11,'%.6g ',dmd1);
 fileID_21 = fopen('dmd_21neg.txt','a');
 fprintf(fileID_21,'%.6g ',dmd2);
-if 0,
+
 fileID_31 = fopen('dmd_31neg.txt','a');
 fprintf(fileID_31,'%.6g ',dmd3);
 fileID_41 = fopen('dmd_41neg.txt','a');
@@ -111,19 +123,3 @@ fileID_51 = fopen('dmd_51neg.txt','a');
 fprintf(fileID_51,'%.6g ',dmd5);
 end
 end
-
-%fileID = fopen('dmd_val1std0.txt','a');
-%fprintf(fileID,'%e\n',dmd1);
-%fileID = fopen('dmd_val2std0.txt','a');
-%fprintf(fileID,'%e\n',dmd2);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%fileID = fopen('a185.txt','a');
-%fprintf(fileID,'%e\n',neff01);
-%fileID = fopen('a285.txt','a');
-%fprintf(fileID,'%e\n',neff02);
-%fileID = fopen('a385.txt','a');
-%fprintf(fileID,'%e\n',neff11);
-%fileID = fopen('a485.txt','a');
-%fprintf(fileID,'%e\n',neff21);
-%fileID = fopen('a585.txt','a');
-%fprintf(fileID,'%e\n',neff31);

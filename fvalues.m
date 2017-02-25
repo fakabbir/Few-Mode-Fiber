@@ -34,7 +34,7 @@ stp=abs((aa(length(aa))-a1)/170);
 
 chklky=0; % 0 to supress leaky mode calculations
 %l=1;      % l of LP(l,m) mode
- mm=3;     % maximum number of roots
+ mm=2;     % maximum number of roots
 
 
 rho=10e24;  %Erbium ion concentration(per meter cube)
