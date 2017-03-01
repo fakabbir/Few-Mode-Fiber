@@ -11,13 +11,12 @@ n_coreb=n_clad*sqrt((100)/(100-2*half_delta_val));
 
 total_dia=62.5;
 d=0.3*10;
-n_points=linspace(-100,100,30);
-n_exp=gauss_distribution(n_points,0,k_stepness);
-t=ones(1,30)*n_clad;
-n_exp=n_exp+t;
-
+n_points=linspace(-100,100,50);
+n_exp=gauss_distribution(n_points,0,10);
+t=ones(1,50)*n_clad;
+n_exp=n_exp+t-;
 n0=[n_clad n_exp n_clad];
-a=[7 ones(1,50)*30 25.5 ]*1e-6;
+a=[]*1e-6;
 
 a1=0;
 %2e-6; r_min for doped region
