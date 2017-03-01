@@ -1,10 +1,10 @@
 clear all;
-dir_path = 'design4aba';
+dir_path = 'design4aab';
 mkdir(dir_path);
 global k_stepness ;
-copyfile('fvalues.m','design4aba/fvalues.m')
-copyfile('Design_plotter.m','design4aba/Design.m')
-copyfile('Design_plotter.ipynb','design4aba/Des_plot.ipynb')
+copyfile('fvalues.m','design4aab/fvalues.m')
+copyfile('Design_plotter.m','design4aab/Design.m')
+copyfile('Design_plotter.ipynb','design4aab/Des_plot.ipynb')
 wave=[1528.5 1529.0 1529.5 1530 1530.5 1531.0 1531.5]*1e-9+20e-9;
 %wave=1550e-9; 
 for j_profile=3:0.2:9,
@@ -78,4 +78,4 @@ fileID_21 = fopen(out_21,'a');
 fprintf(fileID_21,'%.6g ',n2(1,1));
 %----------------------
 end
-copyfile('test.m','design4aba/test.m')
+copyfile('test.m','design4aab/test.m')

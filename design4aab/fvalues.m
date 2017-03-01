@@ -11,7 +11,7 @@ n_coreb=n_clad*sqrt((100)/(100-2*half_delta_val));
 
 total_dia=62.5;
 d=0.3*10;
-n0=[n_clad n_corea n_coreb n_corea n_clad];
+n0=[n_clad n_corea n_corea n_coreb n_clad];
 a=[d+k_stepness 10 10 10 32.5-d-k_stepness]*1e-6;
 
 a1=0;
