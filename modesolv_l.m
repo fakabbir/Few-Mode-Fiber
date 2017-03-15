@@ -130,7 +130,9 @@ if chklky==1            % calculations for leaky modes
     end
 else
     
-    nincr=5e-6;                             % calculations for guided modes
+    %nincr=5e-6;                             % calculations for guided modes
+    %ninc chanegd after Des 6c
+    nincr=5e-8;
     nn=1;
     fb=findP(nmax,wl,l);
     %figure;

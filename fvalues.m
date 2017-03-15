@@ -1,23 +1,26 @@
 % This file contains fiber and amplifier parameters
 
 global stp;
-global k_stepness ;
+global c_extend;
+global r_power;
 format long;
 n_clad=1.4444;
-delta_val=.80;
-half_delta_val=0.40;
-n_corea=n_clad*sqrt((100)/(100-2*delta_val));
-n_coreb=n_clad*sqrt((100)/(100-2*half_delta_val));
+delta_val=.363;
+%half_delta_val=0.40;
+n_core=n_clad*sqrt((100)/(100-2*delta_val));
+%n_coreb=n_clad*sqrt((100)/(100-2*half_delta_val));
 
 total_dia=62.5;
-d=0.3*10;
-n_points=linspace(-100,100,30);
-n_exp=gauss_distribution(n_points,0,k_stepness);
-t=ones(1,30)*n_clad;
-n_exp=n_exp+t;
-
-n0=[n_clad n_exp n_clad];
-a=[7 ones(1,50)*30 25.5 ]*1e-6;
+%d=0.3*10;
+%n_points=linspace(-100,100,30);
+%n_exp=gauss_distribution(n_points,0,k_stepness);
+%t=ones(1,30)*n_clad;
+%n_exp=n_exp+t;
+a_val=62.5-c_extend;
+r_val=linspace(0,a_val,40);
+n_cores=n_core*sqrt(1-(2*delta_val*0.01*(r_val/a_val).^r_power));
+n0=[n_cores n_clad];
+a=[ ones(1,40)*1 c_extend ]*1e-6;
 
 a1=0;
 %2e-6; r_min for doped region

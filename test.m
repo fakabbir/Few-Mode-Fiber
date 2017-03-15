@@ -1,20 +1,23 @@
 clear all;
-dir_path = 'design5';
+dir_path = 'design7';
 mkdir(dir_path);
-global k_stepness ;
-copyfile('fvalues.m','design5/fvalues.m')
-copyfile('Design_plotter.m','design5/Design.m')
-copyfile('Design_plotter.ipynb','design5/Des_plot.ipynb')
+global c_extend ;
+global r_power;
+copyfile('fvalues.m','design7/fvalues.m')
+copyfile('Design_plotter.m','design7/Design.m')
+copyfile('Design_plotter.ipynb','design7/Des_plot.ipynb')
 wave=[1528.5 1529.0 1529.5 1530 1530.5 1531.0 1531.5]*1e-9+20e-9;
 %wave=1550e-9; 
-for j_profile=5:2:30,
-    k_stepness=j_profile;
+for j_profile=1.8:0.05:2.4,
+    c_extend = 22.5;
+    r_power = j_profile;
 for i=1:length(wave),
     [neffr]=modesolv_l(wave(i),0,0,0);
     nil=5-length(neffr);
     bzero=zeros(1,nil);
     n0(i,:)=[neffr bzero];
 end
+
 for i=1:length(wave),
     [neffr]=modesolv_l(wave(i),1,0,1);
     nil=5-length(neffr);
@@ -78,4 +81,4 @@ fileID_21 = fopen(out_21,'a');
 fprintf(fileID_21,'%.6g ',n2(1,1));
 %----------------------
 end
-copyfile('test.m','design5/test.m')
+copyfile('test.m','design7/test.m')
